@@ -1,0 +1,19 @@
+.avatar--border-off,
+.avatar--border-on {
+  display: inline-block;
+}
+
+.avatar--border-off img {
+  width: var(--unit-25x);
+  height: var(--unit-25x);
+  border-radius: var(--unit-4x);
+}
+
+.avatar--border-on img {
+  width: var(--unit-30x);
+  height: var(--unit-30x);
+  border-radius: var(--unit-4x);
+  border: var(--unit-1x) solid var(--green-100);
+  background-color: var(--black-300);
+  padding: var(--unit-2x);
+}
