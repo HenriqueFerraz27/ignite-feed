@@ -28,6 +28,14 @@ export const Post = () => {
         dolorum sit tempora, rem sed praesentium quisquam accusamus iure
         eveniet.
       </div>
+
+      <form className={styles["post__comment-form"]}>
+        <strong>Deixe seu feedback</strong>
+
+        <textarea placeholder="Escreva um comentário..." />
+
+        <button type="submit">Comentar</button>
+      </form>
     </section>
   );
 };
