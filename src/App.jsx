@@ -1,9 +1,16 @@
-import { Header } from "./components";
+import "./styles/App.css";
+import { Header, Profile } from "./components";
 
 function App() {
   return (
     <>
       <Header />
+
+      <main>
+        <aside>
+          <Profile />
+        </aside>
+      </main>
     </>
   );
 }

@@ -1,0 +1,13 @@
+main {
+  display: flex;
+  gap: var(--unit-16x);
+  max-width: 85%;
+  width: 100%;
+  margin: var(--unit-16x) auto;
+}
+
+aside {
+  min-width: 200px;
+  max-width: 250px;
+  width: 100%;
+}
