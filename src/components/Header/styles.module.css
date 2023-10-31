@@ -1,0 +1,10 @@
+.header {
+  display: flex;
+  justify-content: center;
+  padding: var(--unit-10x) 0;
+  background-color: var(--black-300);
+}
+
+.header img {
+  height: var(--unit-20x);
+}
