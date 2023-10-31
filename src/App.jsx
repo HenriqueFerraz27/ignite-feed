@@ -1,5 +1,6 @@
 import "./styles/App.css";
 import { Header, Profile } from "./components";
+import { Post } from "./components/Post";
 
 function App() {
   return (
@@ -10,6 +11,10 @@ function App() {
         <aside>
           <Profile />
         </aside>
+
+        <article>
+          <Post />
+        </article>
       </main>
     </>
   );

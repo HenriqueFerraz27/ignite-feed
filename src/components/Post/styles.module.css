@@ -1,0 +1,113 @@
+.post {
+  display: flex;
+  flex-direction: column;
+  gap: var(--unit-12x);
+  background-color: var(--black-300);
+  border-radius: var(--unit-4x);
+  padding: var(--unit-20x);
+}
+
+.post > header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--unit-4x);
+}
+
+.post > header strong,
+.post > header span {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.post > header time {
+  color: var(--gray-300);
+  font-size: var(--unit-7x);
+  text-align: center;
+}
+
+.avatar-infos {
+  display: flex;
+  align-items: center;
+  gap: var(--unit-8x);
+}
+
+.avatar-infos__infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 160%;
+}
+
+.avatar-infos__infos strong {
+  color: var(--gray-100);
+}
+
+.avatar-infos__infos span {
+  color: var(--gray-300);
+  font-size: var(--unit-7x);
+}
+
+.post__content {
+  line-height: 160%;
+}
+
+.post__content a {
+  display: inline-block;
+  font-weight: 400;
+  color: var(--green-100);
+  transition: all 0.1s;
+}
+
+.post__content a:hover {
+  color: var(--green-200);
+}
+
+.post__comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--unit-8x);
+  padding-top: var(--unit-12x);
+  border-top: var(--unit-1x) solid var(--black-100);
+}
+
+.post__comment-form strong {
+  color: var(--gray-100);
+}
+
+.post__comment-form textarea {
+  width: 100%;
+  min-height: var(--unit-50x);
+  padding: var(--unit-8x);
+  color: var(--gray-100);
+  background-color: var(--black-400);
+  border: none;
+  border-radius: var(--unit-4x);
+  resize: none;
+  transition: all 0.1s;
+}
+
+.post__comment-form textarea:hover {
+  outline: 2px solid var(--green-200);
+}
+
+.post__comment-form button {
+  display: none;
+  align-self: start;
+  padding: var(--unit-8x) var(--unit-12x);
+  color: var(--gray-100);
+  font-weight: 700;
+  background-color: var(--green-200);
+  border-radius: var(--unit-4x);
+  transition: all 0.1s;
+}
+
+.post__comment-form button:hover {
+  background-color: var(--green-100);
+}
+
+.post__comment-form:focus-within button {
+  display: flex;
+}
