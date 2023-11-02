@@ -17,3 +17,13 @@ article {
   flex-direction: column;
   gap: var(--unit-16x);
 }
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+
+  aside {
+    min-width: 100%;
+  }
+}

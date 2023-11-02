@@ -62,3 +62,72 @@
   background-color: var(--green-200);
   color: var(--white-100);
 }
+
+@media (max-width: 768px) {
+  .profile__background {
+    height: var(--unit-50x);
+  }
+
+  .avatar-infos-and-profile-edit {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--unit-8x);
+    padding: var(--unit-16x);
+  }
+  .avatar-infos {
+    flex-direction: row;
+    margin-top: initial;
+  }
+
+  .avatar-infos__infos {
+    align-items: start;
+  }
+
+  .avatar-infos__infos strong,
+  .avatar-infos__infos span {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .profile footer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: initial;
+    padding: initial;
+    border: none;
+  }
+
+  .profile__edit {
+    padding: 0 var(--unit-8x);
+  }
+}
+
+@media (max-width: 500px) {
+  .profile__background {
+    height: var(--unit-45x);
+  }
+
+  .avatar-infos-and-profile-edit {
+    display: block;
+    padding: initial;
+  }
+
+  .avatar-infos {
+    flex-direction: column;
+    margin-top: calc(0rem - var(--unit-15x));
+  }
+
+  .avatar-infos__infos {
+    align-items: center;
+  }
+
+  .profile footer {
+    margin-top: var(--unit-12x);
+    padding: var(--unit-12x);
+    border-top: 1px solid var(--black-100);
+  }
+
+}

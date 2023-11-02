@@ -11,23 +11,25 @@ export const Profile = () => {
         alt="Profile Background"
       />
 
-      <div className={styles["avatar-infos"]}>
-        <Avatar
-          src="https://github.com/HenriqueFerraz27.png"
-          alt="Profile Avatar"
-        />
+      <div className={styles["avatar-infos-and-profile-edit"]}>
+        <div className={styles["avatar-infos"]}>
+          <Avatar
+            src="https://github.com/HenriqueFerraz27.png"
+            alt="Profile Avatar"
+          />
 
-        <div className={styles["avatar-infos__infos"]}>
-          <strong>Henrique Ferraz</strong>
-          <span>Web Developer</span>
+          <div className={styles["avatar-infos__infos"]}>
+            <strong>Henrique Ferraz</strong>
+            <span>Web Developer</span>
+          </div>
         </div>
-      </div>
 
-      <footer>
-        <a className={styles.profile__edit}>
-          <Icon.PencilLine /> Editar seu perfil
-        </a>
-      </footer>
+        <footer>
+          <a className={styles.profile__edit}>
+            <Icon.PencilLine /> Editar seu perfil
+          </a>
+        </footer>
+      </div>
     </section>
   );
 };

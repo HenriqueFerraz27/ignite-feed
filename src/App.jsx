@@ -1,6 +1,5 @@
 import "./styles/App.css";
-import { Header, Profile } from "./components";
-import { Post } from "./components/Post";
+import { Header, Profile, Post } from "./components";
 
 function App() {
   return (

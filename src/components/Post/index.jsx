@@ -1,4 +1,4 @@
-import { Avatar } from "../index";
+import { Avatar, Comment } from "../index";
 import styles from "./styles.module.css";
 
 export const Post = () => {
@@ -36,6 +36,10 @@ export const Post = () => {
 
         <button type="submit">Comentar</button>
       </form>
+
+      <div className="comments">
+        <Comment />
+      </div>
     </section>
   );
 };
