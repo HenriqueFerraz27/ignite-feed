@@ -9,10 +9,12 @@ function App() {
         name: "Henrique Ferraz",
         role: "Web Developer",
       },
-      content: `Fala galeraa 👋
-
-      Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀`,
-      puplished: new Date("2023-11-02 12:09:00"),
+      content: `
+      Fala galeraa 👋
+      
+      Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀
+      `,
+      published: new Date("2023-11-02 12:09:00"),
     },
     {
       author: {
@@ -24,7 +26,7 @@ function App() {
       debitis repellendus repudiandae quibusdam ex quis nobis atque eaque hic
       dolorum sit tempora, rem sed praesentium quisquam accusamus iure
       eveniet.`,
-      puplished: new Date("2023-12-02 12:09:00"),
+      published: new Date("2023-11-02 12:09:00"),
     },
   ];
 
@@ -39,7 +41,14 @@ function App() {
 
         <article>
           {posts.map((post, index) => {
-            return <Post key={index} />;
+            return (
+              <Post
+                key={index}
+                author={post.author}
+                content={post.content}
+                published={post.published}
+              />
+            );
           })}
         </article>
       </main>

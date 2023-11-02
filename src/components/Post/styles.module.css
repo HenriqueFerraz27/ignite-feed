@@ -37,7 +37,7 @@
 .avatar-infos__infos {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: start;
   line-height: 160%;
 }
 

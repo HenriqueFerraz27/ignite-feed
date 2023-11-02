@@ -16,7 +16,9 @@ export const Comment = () => {
           <header>
             <div>
               <strong>
-                Henrique Ferraz <span>(você)</span>
+                <a>
+                  Henrique Ferraz <span>(você)</span>
+                </a>
               </strong>
 
               <time title="13 de Setembro às 15:37" dateTime="2023-09-13">

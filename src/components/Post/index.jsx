@@ -1,33 +1,40 @@
+import { format, formatDistanceToNow } from "date-fns";
 import { Avatar, Comment } from "../index";
 import styles from "./styles.module.css";
+import { ptBR } from "date-fns/locale";
 
-export const Post = () => {
+export const Post = ({ author, content, published }) => {
+  const publishedDateFormatted = format(
+    published,
+    "d 'de' LLLL 'às' HH:mm'h'",
+    {
+      locale: ptBR,
+    }
+  );
+
+  const publishedDateRelativeToNow = formatDistanceToNow(published, {
+    locale: ptBR,
+    addSuffix: true,
+  });
+
   return (
     <section className={styles.post}>
       <header>
         <div className={styles["avatar-infos"]}>
-          <Avatar
-            src="https://github.com/HenriqueFerraz27.png"
-            alt="Author Avatar"
-          />
+          <Avatar src={author.avatarUrl} alt="Author Avatar" />
 
-          <div className={styles["avatar-infos__infos"]}>
-            <strong>Henrique Ferraz</strong>
-            <span>Web Developer</span>
-          </div>
+          <a className={styles["avatar-infos__infos"]}>
+            <strong>{author.name}</strong>
+            <span>{author.role}</span>
+          </a>
         </div>
 
-        <time title="31 de Outubro às 15:38" dateTime="2023-10-31">
-          Publicado há 1h
+        <time title={publishedDateFormatted} dateTime={published.toISOString()}>
+          {publishedDateRelativeToNow}
         </time>
       </header>
 
-      <div className={styles.post__content}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita vero
-        debitis repellendus repudiandae quibusdam ex quis nobis atque eaque hic
-        dolorum sit tempora, rem sed praesentium quisquam accusamus iure
-        eveniet.
-      </div>
+      <div className={styles.post__content}>{content}</div>
 
       <form className={styles["post__comment-form"]}>
         <strong>Deixe seu feedback</strong>

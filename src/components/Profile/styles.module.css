@@ -116,18 +116,18 @@
   }
 
   .avatar-infos {
-    flex-direction: column;
-    margin-top: calc(0rem - var(--unit-15x));
-  }
-
-  .avatar-infos__infos {
-    align-items: center;
+    justify-content: center;
+    padding: var(--unit-12x);
   }
 
   .profile footer {
-    margin-top: var(--unit-12x);
-    padding: var(--unit-12x);
+    padding: var(--unit-12x) ;
     border-top: 1px solid var(--black-100);
+  }
+
+  .profile__edit {
+    max-width: 20rem;
+    margin: auto;
   }
 
 }

@@ -18,10 +18,10 @@ export const Profile = () => {
             alt="Profile Avatar"
           />
 
-          <div className={styles["avatar-infos__infos"]}>
+          <a className={styles["avatar-infos__infos"]}>
             <strong>Henrique Ferraz</strong>
             <span>Web Developer</span>
-          </div>
+          </a>
         </div>
 
         <footer>
