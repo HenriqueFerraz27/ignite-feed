@@ -2,7 +2,7 @@ import styles from "./styles.module.css";
 import { Avatar } from "../../index";
 import * as Icon from "phosphor-react";
 
-export const Comment = () => {
+export const Comment = ({ content }) => {
   return (
     <div className={styles.comment}>
       <Avatar
@@ -31,9 +31,7 @@ export const Comment = () => {
             </button>
           </header>
 
-          <div className={styles.comment__content}>
-            Muito bom Henrique, parabéns!! 👏👏
-          </div>
+          <div className={styles.comment__content}>{content}</div>
         </div>
 
         <button className={styles.comment__feedback}>
