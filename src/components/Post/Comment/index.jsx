@@ -2,7 +2,7 @@ import styles from "./styles.module.css";
 import { Avatar } from "../../index";
 import * as Icon from "phosphor-react";
 
-export const Comment = ({ content }) => {
+export const Comment = ({ content, onDeleteComment }) => {
   return (
     <div className={styles.comment}>
       <Avatar
@@ -26,7 +26,7 @@ export const Comment = ({ content }) => {
               </time>
             </div>
 
-            <button>
+            <button onClick={() => onDeleteComment(content)}>
               <Icon.Trash />
             </button>
           </header>
@@ -34,7 +34,10 @@ export const Comment = ({ content }) => {
           <div className={styles.comment__content}>{content}</div>
         </div>
 
-        <button className={styles.comment__feedback}>
+        <button
+          className={styles.comment__feedback}
+          
+        >
           <Icon.ThumbsUp /> Aplaudir • 33
         </button>
       </div>

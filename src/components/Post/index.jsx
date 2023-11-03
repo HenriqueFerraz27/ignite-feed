@@ -19,6 +19,14 @@ export const Post = ({ author, content, published }) => {
     setNewCommentText(event.target.value);
   };
 
+  const deleteComment = (commentDeleted) => {
+    const commentsWithoutTheDeleted = comments.filter((comment) => {
+      return comment !== commentDeleted;
+    });
+
+    setComments(commentsWithoutTheDeleted);
+  };
+
   const publishedDateFormatted = format(
     published,
     "d 'de' LLLL 'às' HH:mm'h'",
@@ -68,7 +76,13 @@ export const Post = ({ author, content, published }) => {
 
       <div className={styles["post__comments"]}>
         {comments.map((comment, index) => {
-          return <Comment key={index} content={comment} />;
+          return (
+            <Comment
+              key={index}
+              content={comment}
+              onDeleteComment={deleteComment}
+            />
+          );
         })}
       </div>
     </section>
