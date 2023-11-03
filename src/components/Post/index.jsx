@@ -71,7 +71,9 @@ export const Post = ({ author, content, published }) => {
           onChange={handleNewCommentChange}
         />
 
-        <button type="submit">Comentar</button>
+        <button type="submit" disabled={newCommentText.length === 0}>
+          Comentar
+        </button>
       </form>
 
       <div className={styles["post__comments"]}>
