@@ -78,3 +78,7 @@
 .comment__feedback:hover {
   color: var(--gray-100);
 }
+
+.comment__feedback:active {
+  color: var(--green-100);
+}

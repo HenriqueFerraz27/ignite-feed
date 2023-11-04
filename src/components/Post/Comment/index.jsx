@@ -1,8 +1,15 @@
 import styles from "./styles.module.css";
 import { Avatar } from "../../index";
 import * as Icon from "phosphor-react";
+import { useState } from "react";
 
 export const Comment = ({ content, onDeleteComment }) => {
+  const [likeCount, setLikeCount] = useState(0);
+
+  const handleLikeComment = () => {
+    setLikeCount(likeCount + 1);
+  };
+
   return (
     <div className={styles.comment}>
       <Avatar
@@ -36,9 +43,9 @@ export const Comment = ({ content, onDeleteComment }) => {
 
         <button
           className={styles.comment__feedback}
-          
+          onClick={handleLikeComment}
         >
-          <Icon.ThumbsUp /> Aplaudir • 33
+          <Icon.ThumbsUp /> Curtir • {likeCount}
         </button>
       </div>
     </div>
