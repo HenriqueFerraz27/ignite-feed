@@ -3,11 +3,18 @@ import { Avatar } from "../../index";
 import * as Icon from "phosphor-react";
 import { useState } from "react";
 
-export const Comment = ({ content, onDeleteComment }) => {
+interface CommentProps {
+  content: string;
+  onDeleteComment: (commentDeleted: string) => void;
+}
+
+export const Comment = ({ content, onDeleteComment }: CommentProps) => {
   const [likeCount, setLikeCount] = useState(0);
 
   const handleLikeComment = () => {
-    setLikeCount(likeCount + 1);
+    const newLikeCount = likeCount + 1;
+
+    setLikeCount(newLikeCount);
   };
 
   return (

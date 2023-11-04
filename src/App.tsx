@@ -5,7 +5,7 @@ function App() {
   const posts = [
     {
       author: {
-        avatarUrl: "https://github.com/HenriqueFerraz27.png",
+        avatarURL: "https://github.com/HenriqueFerraz27.png",
         name: "Henrique Ferraz",
         role: "Web Developer",
       },
@@ -18,7 +18,7 @@ function App() {
     },
     {
       author: {
-        avatarUrl: "https://github.com/HenriqueFerraz27.png",
+        avatarURL: "https://github.com/HenriqueFerraz27.png",
         name: "Luiz Ferraz",
         role: "Web Developer",
       },

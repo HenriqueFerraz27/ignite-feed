@@ -2,24 +2,36 @@ import { format, formatDistanceToNow } from "date-fns";
 import { Avatar, Comment } from "../index";
 import styles from "./styles.module.css";
 import { ptBR } from "date-fns/locale";
-import { useState } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
 
-export const Post = ({ author, content, published }) => {
-  const [comments, setComments] = useState([]);
-  const [newCommentText, setNewCommentText] = useState("");
+interface AuthorProps {
+  name: string;
+  role: string;
+  avatarURL: string;
+}
 
-  const handleCreateNewComment = (event) => {
+interface PostProps {
+  author: AuthorProps;
+  content: string;
+  published: Date;
+}
+
+export const Post = ({ author, content, published }: PostProps) => {
+  const [comments, setComments] = useState<string[]>([]);
+  const [newCommentText, setNewCommentText] = useState<string>("");
+
+  const handleCreateNewComment = (event: FormEvent) => {
     event.preventDefault();
 
     setComments([...comments, newCommentText]);
     setNewCommentText("");
   };
 
-  const handleNewCommentChange = (event) => {
+  const handleNewCommentChange = (event: ChangeEvent<HTMLTextAreaElement>) => {
     setNewCommentText(event.target.value);
   };
 
-  const deleteComment = (commentDeleted) => {
+  const deleteComment = (commentDeleted: string) => {
     const commentsWithoutTheDeleted = comments.filter((comment) => {
       return comment !== commentDeleted;
     });
@@ -44,7 +56,7 @@ export const Post = ({ author, content, published }) => {
     <section className={styles.post}>
       <header>
         <div className={styles["avatar-infos"]}>
-          <Avatar src={author.avatarUrl} alt="Author Avatar" />
+          <Avatar src={author.avatarURL} alt="Author Avatar" />
 
           <a className={styles["avatar-infos__infos"]}>
             <strong>{author.name}</strong>

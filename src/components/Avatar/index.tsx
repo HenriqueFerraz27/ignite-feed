@@ -1,6 +1,12 @@
 import styles from "./styles.module.css";
 
-export const Avatar = ({ src, alt, withBorder = true }) => {
+interface AvatarProps {
+  src: string;
+  alt: string;
+  withBorder?: boolean;
+}
+
+export const Avatar = ({ src, alt, withBorder = true }: AvatarProps) => {
   return (
     <div
       className={
