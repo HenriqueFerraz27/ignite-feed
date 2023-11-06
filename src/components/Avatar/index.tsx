@@ -1,12 +1,11 @@
+import { ImgHTMLAttributes } from "react";
 import styles from "./styles.module.css";
 
-interface AvatarProps {
-  src: string;
-  alt: string;
+interface AvatarProps extends ImgHTMLAttributes<HTMLImageElement> {
   withBorder?: boolean;
 }
 
-export const Avatar = ({ src, alt, withBorder = true }: AvatarProps) => {
+export const Avatar = ({ withBorder = true, ...rest }: AvatarProps) => {
   return (
     <div
       className={
@@ -14,7 +13,7 @@ export const Avatar = ({ src, alt, withBorder = true }: AvatarProps) => {
       }
     >
       <a>
-        <img src={src} alt={alt} />
+        <img {...rest} />
       </a>
     </div>
   );
